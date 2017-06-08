@@ -1,16 +1,29 @@
 from datetime import datetime
 from os import getcwd
+import time
+import random
 
 odds = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39,
         41, 43, 47, 49, 51, 53, 55, 57, 59 ]
 
-right_this_minute = datetime.today().minute
 
-if right_this_minute in odds:
-    print("This minute seems a little odd.")
-else:
-    print("Not an Odd Minute")
+for i in range(5):
+    right_this_minute = datetime.today().minute
+    if right_this_minute in odds:
+            print("This minute seems a little odd.")
+    else:
+            print("Not an Odd Minute")
+    time.sleep(5)
 
 current_cwd = getcwd()
 print("Current working Directory is : " , current_cwd)
+
+today = datetime.today()
+
+if today == 'Saturday':
+    print("Staurday It is: get Grocery")
+elif today == 'Friday':
+    print("Thank GOD its friday bro")
+else:
+    print("Oh man its just another AWESOME day")
 
